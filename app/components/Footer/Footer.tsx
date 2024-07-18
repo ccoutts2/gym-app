@@ -9,9 +9,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="absolute bottom-0 w-full my-4 bg-[#f6f6f6] rounded-t-full rounded-b-full">
       <nav>
-        <ul className="flex justify-between items-stretch">
+        <ul className="flex justify-between items-stretch py-2 px-4">
           <Widget href="/history" icon={CgProfile} label="history" />
           <Widget href="/profile" icon={GoHistory} label="profile" />
           <Widget href="/" icon={IoIosAdd} label="workout" />

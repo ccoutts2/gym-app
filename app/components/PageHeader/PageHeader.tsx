@@ -4,7 +4,7 @@ interface PageHeadProps {
 
 const PageHeader = ({ header }: PageHeadProps) => {
   return (
-    <header className="p-4">
+    <header className="py-4">
       <h1 className="text-xl font-semibold">{header}</h1>
     </header>
   );

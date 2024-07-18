@@ -1,14 +1,16 @@
+import { useSelectedMuscleContext } from "@/app/contexts";
+
+import ExerciseList from "../components/ExerciceList/ExerciseList";
 import PageHeader from "../components/PageHeader/PageHeader";
 
-const getData = async () => {
-  const baseURL = "https://api.api-ninjas.com/v1";
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-};
-
-export default function Page() {
+export default async function Page() {
+  const SelectedMuscleProvider = useSelectedMuscleContext();
   return (
-    <section>
-      <PageHeader header="Exercises" />
+    <section className="p-4">
+      <SelectedMuscleProvider>
+        <PageHeader header="Exercises" />
+        <ExerciseList />
+      </SelectedMuscleProvider>
     </section>
   );
 }
