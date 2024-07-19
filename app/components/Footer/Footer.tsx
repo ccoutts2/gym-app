@@ -34,7 +34,9 @@ interface WidgetProps extends IconBaseProps {
 const Widget = ({ icon: Icon, label, href }: WidgetProps) => {
   return (
     <li className="flex flex-col items-center justify-center w-[50%]">
-      <Link href={href} className="flex flex-col items-center justify-center gap-1">
+      <Link
+        href={href}
+        className="flex flex-col items-center justify-center gap-1 font-semibold">
         <span>
           <Icon />
         </span>
